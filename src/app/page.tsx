@@ -120,7 +120,7 @@ export default function Home() {
         <p className="eyebrow"><span className="eyebrow-line" /> HAVE A GOOD QUESTION?</p>
         <h2>Let’s make<br />something <em>matter.</em></h2>
         <p className="contact-copy">Interested in security, AI, or building thoughtful things? I’d love to hear what you’re working on.</p>
-        <a className="button button-primary contact-button" href="mailto:hello@shivanshsoni.dev">SAY HELLO <ArrowUpRight /></a>
+        <a className="button button-primary contact-button" href="mailto:shivanshsoni124@gmail.com">SAY HELLO <ArrowUpRight /></a>
         <div className="contact-orbit" aria-hidden="true"><div /><div /><div /></div>
       </section>
 
