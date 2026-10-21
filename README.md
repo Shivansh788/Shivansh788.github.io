@@ -11,7 +11,7 @@ A cinematic personal portfolio built with Next.js, TypeScript, and Motion for Re
 ## Make it yours
 
 - Edit project cards and capability tags in `src/app/page.tsx`.
-- Replace the contact email (`hello@shivanshsoni.dev`) with the address you want to publish.
+- The contact button currently emails `shivanshsoni124@gmail.com`.
 - Add social links, a real resume, and richer project details when ready.
 - Update the title and description in `src/app/layout.tsx`.
 
