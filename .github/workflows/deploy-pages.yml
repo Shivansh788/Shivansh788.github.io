@@ -26,6 +26,8 @@ jobs:
         run: npm install
       - name: Build static site
         run: npm run build
+      - name: Include intro video in Pages artifact
+        run: cp Preloader_Portfolio.mp4 ./out/Preloader_Portfolio.mp4
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4
         with:
