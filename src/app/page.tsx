@@ -32,6 +32,29 @@ const projects = [
 
 const capabilities = ["Cybersecurity", "AI engineering", "Security research", "Product thinking", "Full-stack building"];
 
+const experience = [
+  {
+    period: "CURRENT",
+    title: "Xynera",
+    kind: "INDEPENDENT PROJECT",
+    description: "Exploring the intersection of AI and cybersecurity, shaping an idea into a focused project.",
+    tags: ["AI systems", "Security"],
+  },
+  {
+    period: "ONGOING",
+    title: "Security research & prototypes",
+    kind: "INDEPENDENT PRACTICE",
+    description: "Learning how systems fail and experimenting with thoughtful, more secure ways to build.",
+    tags: ["Research", "Prototyping"],
+  },
+];
+
+const skillGroups = [
+  { name: "Security", note: "01 / FOCUS", skills: ["Cybersecurity", "Security research", "Secure systems"] },
+  { name: "AI & systems", note: "02 / FOCUS", skills: ["AI engineering", "Intelligent systems", "AI × security"] },
+  { name: "Web engineering", note: "03 / TOOLKIT", skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Motion"] },
+];
+
 function ArrowUpRight() {
   return <span aria-hidden="true" className="arrow">↗</span>;
 }
@@ -48,8 +71,10 @@ export default function Home() {
       <header className="topbar wrap">
         <a className="wordmark" href="#home" aria-label="Shivansh Soni, home"><span className="wordmark-mark">S<span>.</span></span><span>SHIVANSH SONI</span></a>
         <nav aria-label="Main navigation">
-          <a href="#work">Work</a>
-          <a href="#about">About</a>
+          <a className="nav-work" href="#work">Work</a>
+          <a href="#experience">Experience</a>
+          <a href="#skills">Skills</a>
+          <a className="nav-about" href="#about">About</a>
           <a href="#contact">Contact <ArrowUpRight /></a>
         </nav>
         <a className="availability" href="#contact"><span className="live-dot" /> OPEN TO OPPORTUNITIES</a>
@@ -106,6 +131,38 @@ export default function Home() {
               <div className="project-art" aria-hidden="true"><div className="art-grid" /><div className="art-orb"><span /><span /><span /></div><div className="art-corner">{project.number} / 03</div></div>
             </motion.article>
           ))}
+        </div>
+      </section>
+
+      <section className="experience-section section wrap" id="experience">
+        <div className="section-head">
+          <div><p className="eyebrow"><span className="eyebrow-line" /> EXPERIENCE</p><h2>Work in <em>progress.</em></h2></div>
+          <p className="section-note">A project-based snapshot of what<br />I’m exploring and building.</p>
+        </div>
+        <div className="experience-list">
+          {experience.map((item, index) => (
+            <motion.article className="experience-item" key={item.title} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.25 }} transition={{ duration: 0.6, delay: index * 0.1 }}>
+              <div className="experience-rail"><span>{item.period}</span><i /></div>
+              <div className="experience-content"><p className="project-kind">{item.kind}</p><h3>{item.title}</h3><p className="experience-description">{item.description}</p><div className="tag-row">{item.tags.map(tag => <span className="tag" key={tag}>{tag}</span>)}</div></div>
+              <span className="experience-index">0{index + 1} / 0{experience.length}</span>
+            </motion.article>
+          ))}
+        </div>
+      </section>
+
+      <section className="skills-section section" id="skills">
+        <div className="wrap">
+          <div className="section-head">
+            <div><p className="eyebrow"><span className="eyebrow-line" /> SKILLS</p><h2>What I work <em>with.</em></h2></div>
+            <p className="section-note">A few areas and tools shaping<br />the way I build.</p>
+          </div>
+          <div className="skill-grid">
+            {skillGroups.map((group, index) => (
+              <motion.article className="skill-card" key={group.name} initial={{ opacity: 0, y: 22 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.55, delay: index * 0.1 }}>
+                <div className="skill-card-top"><span>{group.note}</span><i>✳</i></div><h3>{group.name}</h3><div className="skill-tags">{group.skills.map((skill, skillIndex) => <motion.span key={skill} initial={{ opacity: 0, scale: 0.94 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ delay: index * 0.1 + skillIndex * 0.045 }}>{skill}</motion.span>)}</div>
+              </motion.article>
+            ))}
+          </div>
         </div>
       </section>
 
