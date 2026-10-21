@@ -22,6 +22,7 @@
 .hero-actions{margin-top:31px}
 .button{height:52px;padding-inline:21px}
 .site-shell{--bg:#080b10;--panel:#0d1118;--line:rgba(223,235,244,.12);--mint:#a7f9c8}
+.site-shell>*:not(.noise):not(.binary-rain):not(.portfolio-preloader){position:relative;z-index:2}
 .site-shell.mode-cyber{--bg:#040a09;--panel:#07120f;--line:rgba(91,255,181,.2);--mint:#6dffae;--blue:#36e4d0;--violet:#7cffcc;background:var(--bg)}
 .mode-cyber .topbar,.mode-cyber .ticker,.mode-cyber .skills-section,.mode-cyber .about-section{border-color:var(--line)}
 .mode-cyber .topbar,.mode-cyber .ticker,.mode-cyber .about-section{background:rgba(4,10,9,.94)}
