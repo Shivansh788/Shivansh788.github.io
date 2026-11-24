@@ -2,6 +2,8 @@
 
 A cinematic personal portfolio built with Next.js, TypeScript, and Motion for React.
 
+**Live site:** [shivansh788.github.io](https://shivansh788.github.io/)
+
 ## Run locally
 
 1. Install Node.js 20.9 or newer.
@@ -15,14 +17,10 @@ A cinematic personal portfolio built with Next.js, TypeScript, and Motion for Re
 - Add social links, a real resume, and richer project details when ready.
 - Update the title and description in `src/app/layout.tsx`.
 
-## Deploy using only GitHub Pages
+## Deploy using GitHub Pages
 
-1. Create a GitHub repository and push this project to its `main` branch.
-2. In the repository, open **Settings → Pages** and set the publishing source to **GitHub Actions**.
-3. The included workflow builds the static site and publishes it. After its first successful run, the Pages settings will show the live URL. Future pushes to `main` publish updates automatically.
+This repository is named `Shivansh788.github.io`, so GitHub Pages serves the account site at the root domain. The included GitHub Actions workflow builds and deploys the static site whenever `main` changes.
 
-The workflow handles GitHub Pages' repository subpath automatically. An account site named `yourname.github.io` is served at the domain root; other repositories are served beneath `/<repository-name>`.
+The workflow also supports project-site subpaths if this repository is renamed. This is a static site; server-side Next.js features such as API routes, server actions, or request-time rendering need a server host.
 
-This is a static site, which suits this portfolio. Server-side Next.js features such as API routes, server actions, or request-time rendering need a server host; the portfolio would need another host if we add those later.
-
-The current copy is a starter draft. Review project descriptions, links, and contact details before publishing.
+The project descriptions are starter copy. Review them and add real links and details as the portfolio grows.
